@@ -4,6 +4,7 @@ const titleInput = document.getElementById("title-input");
 const authorInput = document.getElementById("author-input");
 const yearInput = document.getElementById("year-input");
 const daysSelect = document.getElementById("days-select");
+const notAddBook = document.getElementById("not-add-book")
 
 /*
 Event listeners
@@ -20,6 +21,11 @@ addButton.addEventListener("click", event => {
     goToSection(1);
 });
 
+notAddBook.addEventListener("click", event => {
+    goToSection(0);
+    openList(listSettings.viewing);
+});
+
 addBookForm.addEventListener("submit", event => {
     /*
     When clicking the "Add to my reading plan"-button
@@ -32,8 +38,9 @@ addBookForm.addEventListener("submit", event => {
         titleInput.value,
         authorInput.value,
         yearInput.value,
-        daysSelect.value
+        parseInt(daysSelect.value)
     );
+    console.log(typeof daysSelect.value)
     saveBookObject(newBook);
     goToSection(0);
     openList(0);

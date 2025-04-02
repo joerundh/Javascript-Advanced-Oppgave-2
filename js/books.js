@@ -70,14 +70,19 @@ function createBookObject(title, author, year, days) {
     of Date.now(). This should safely enough identify the object
     uniquely.
     */
-    return {
+    const bookObject = {
         key: Date.now(),
         title: title,
         author: author,
-        year: year,
-        status: 0,
-        days: days || -1
+        status: 0
     };
+    if (year) {
+        bookObject.year = year;
+    }
+    if (days) {
+        bookObject.days = days;
+    }
+    return bookObject;
 }
 
 function saveBookObject(obj) {

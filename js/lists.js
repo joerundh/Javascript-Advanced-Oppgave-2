@@ -167,13 +167,20 @@ function createListElement(book) {
     titleElement.style.fontStyle = "italic";
     titleElement.textContent = `${book.title}`;
 
-    const subtitleElement = document.createElement("p");
-    subtitleElement.innerHTML = `by <b>${book.author}</b>`;
+    const authorElement = document.createElement("p");
+    authorElement.innerHTML = `by <b>${book.author}</b>`;
 
-    infoDiv.append(titleElement, subtitleElement);
+    infoDiv.append(titleElement, authorElement);
+
+    if (book.year) {
+        const yearElement = document.createElement("p");
+        yearElement.textContent = `published in ${book.year}`;
+        infoDiv.append(yearElement);
+    }
 
     const optionsDiv = document.createElement("div");
     optionsDiv.className = "book-list-item-options";
+    
     if (book.status === 0) {
         /*
         If the book is "Planned to read", show self-estimated 
@@ -206,9 +213,8 @@ function createListElement(book) {
             deleteBookObject(book);
             openList(0);
         });
-        optionsDiv.appendChild(removeBookButton);
 
-        optionsDiv.append(startReadingButton);
+        optionsDiv.append(startReadingButton, removeBookButton);
     } else if (book.status === 1) {
         /*
         When changed to currently reading, if a number of days to 
