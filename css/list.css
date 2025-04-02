@@ -1,0 +1,45 @@
+#lists main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#lists main > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#lists > main > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.book-list-item {
+    list-style-type: none;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-list-item-info, .book-list-item-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.book-list-item button {
+    flex: 0 1;
+}

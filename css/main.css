@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 400px;
+    margin: 0 auto;
+}
+
+header {
+    width: 400px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header button {
+    padding: 1px 2px;
+}
+
+main {
+    padding: 10px;
+}
+
+select {
+    padding: 1px 2px;
+}
+
+button {
+    padding: 1px 2px;
+}

@@ -1,0 +1,10 @@
+#add-book > main > form {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#submit-book {
+    padding: 1px 2px;
+}
