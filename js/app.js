@@ -52,5 +52,3 @@ Upon loading, open the last viewed list
 
 goToSection(0);
 openList(listSettings.viewing);
-
-//localStorage.clear();

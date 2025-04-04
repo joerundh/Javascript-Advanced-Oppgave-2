@@ -387,6 +387,23 @@ function openList(listIndex) {
         sortingSelect.appendChild(option);
     });
     sortingSelect.value = listSettings.sortingKeys[listIndex];
+    
+    /*
+    If the end of the "list list" is reached, disable the button
+    that shifts the list further. This signals to the reader that
+    there are no other lists to be found in that particular direction, 
+    and there is no other way to go but back now.
+    */
+    if (listSettings.viewing === 0) {
+        shiftLeft.disabled = true;
+    } else {
+        shiftLeft.disabled = false;
+    }
+    if (listSettings.viewing === listTitles.length - 1) {
+        shiftRight.disabled = true;
+    } else {
+        shiftRight.disabled = false;
+    }
 }
 
 /*
