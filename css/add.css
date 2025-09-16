@@ -5,6 +5,15 @@
     gap: 10px;
 }
 
-#submit-book {
-    padding: 1px 2px;
+#add-book label {
+    display: inline-block;
+    width: 120px;
+}
+
+#title-input, #author-input {
+    width: 345px;
+}
+
+#year-input {
+    width: 80px;
 }

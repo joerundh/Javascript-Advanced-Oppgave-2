@@ -5,32 +5,72 @@
 }
 
 body {
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    background: #202020;
+    color: #808080;
 }
 
 header {
-    width: 400px;
-    border-bottom: 1px solid black;
+    width: 500px;
+    border-bottom: 1px solid #808080;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: black;
+    color: #808080;
+    font-size: 18px;
+    text-shadow: 2px 2px #303030;
+}
+
+button, input[type=submit] {
+    padding: 5px;
+    font-size: 14px;
+    background-color: black;
+    border: 1px solid #808080;
+    color: #a0a0a0;
+    box-shadow: 2px 2px #303030;
+    border-radius: 2px;
 }
 
 header button {
-    padding: 1px 2px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    background-color: #808080;
+    color: black;
+    border: none;
+    box-shadow: 2px 2px #303030;
+    border-radius: 2px;
 }
 
 main {
     padding: 10px;
+    font-size: 16px;
+    color: #a0a0a0;
+    background-color: black;
+    min-height: 800px;
+    text-shadow: 1px 1px #404040;
+}
+
+input {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #808080;
+    color: #a0a0a0;
+    background-color: black;
+    outline: none;
 }
 
 select {
-    padding: 1px 2px;
-}
-
-button {
-    padding: 1px 2px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: black;
+    color: #a0a0a0;
+    box-shadow: 2px 2px #303030;
 }
